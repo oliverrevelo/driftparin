@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Drift Home</title>
+    <link rel="stylesheet" href="style-home.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="icon" type="icon" href="pics/logo_white_bg.png">
+</head>
+
+<body>
+    <nav id="navbar">
+        <div class="menu-icon">
+            <span class="fas fa-bars"></span>
+        </div>
+        <div class="logo">
+            <a href="#"><img src="pics/logo_no_bg.png" height="40" width="45"></a>
+        </div>
+        <div class="nav-items">
+            <li><a href="#">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#">Delivery</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </div>
+        <div class="search-icon">
+            <span class="fas fa-search"></span>
+        </div>
+        <div class="cancel-icon">
+            <span class="fas fa-times"></span>
+        </div>
+        <form action="#">
+            <input type="search" class="search-data" placeholder="Search" required>
+            <button type="submit" class="fas fa-search"></button>
+        </form>
+        <div class="login">
+            <a href="login.html">Log In</a>
+        </div>
+    </nav>
+    <div class="content">
+        <section id="hero">
+            <div class="hero-text">
+                <h2>Welcome to Drift!</h2>
+                <p>"Style that moves with you."</p>
+                <a href="#products" class="btn">Shop Now</a>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container">
+                <h2>About Us</h2>
+                <p>Drift is a clothing and apparel brand that is all about embracing the journey and finding your flow.
+                    Our clothing is designed with the free-spirited and adventurous in mind, providing comfort and style
+                    that moves with you as you explore the world.</p>
+            </div>
+        </section>
+
+        <section id="products">
+            <div class="container">
+                <h2>Our Products</h2>
+                <div class="product">
+                    <img src="pics/product1.png" alt="Product 1">
+                    <h3>Product 1</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="#" class="btn">View Details</a>
+                </div>
+                <div class="product">
+                    <img src="pics/product2.png" alt="Product 2">
+                    <h3>Product 2</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="#" class="btn">View Details</a>
+                </div>
+                <div class="product">
+                    <img src="pics/product3.png" alt="Product 2">
+                    <h3>Product 3</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="#" class="btn">View Details</a>
+                </div>
+                <!-- More product items -->
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <p>For any inquiries or assistance, please feel free to contact us using the information below:</p>
+                <ul>
+                    <li>Email: info@example.com</li>
+                    <li>Phone: 123-456-7890</li>
+                    <li>Address: 123 Main St, City, State, ZIP</li>
+                </ul>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                <p>&copy; 2023 Drift Co. All rights reserved.</p>
+            </div>
+        </footer>
+
+    </div>
+    <script>
+        const menuBtn = document.querySelector(".menu-icon span");
+        const searchBtn = document.querySelector(".search-icon");
+        const cancelBtn = document.querySelector(".cancel-icon");
+        const items = document.querySelector(".nav-items");
+        const form = document.querySelector("form");
+        menuBtn.onclick = () => {
+            items.classList.add("active");
+            menuBtn.classList.add("hide");
+            searchBtn.classList.add("hide");
+            cancelBtn.classList.add("show");
+        }
+        cancelBtn.onclick = () => {
+            items.classList.remove("active");
+            menuBtn.classList.remove("hide");
+            searchBtn.classList.remove("hide");
+            cancelBtn.classList.remove("show");
+            form.classList.remove("active");
+            cancelBtn.style.color = "#000";
+        }
+        searchBtn.onclick = () => {
+            form.classList.add("active");
+            searchBtn.classList.add("hide");
+            cancelBtn.classList.add("show");
+        }
+
+        window.onscroll = function () { myFunction() };
+
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+    </script>
+</body>
+
+</html>

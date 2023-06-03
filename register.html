@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="pics/logo_white_bg.png">
+  <title>Register to Drift!</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Create your Drift Account!</h1>
+    <div class="form">
+      <form>
+        <label for="uname">Preferred Username</label><br>
+        <input type="text" id="uname" name="uname" pattern="[A-Za-z0-9]+" required minlength="4" maxlength="12"><br>
+        <label for="fname">First Name</label><br>
+        <input type="text" id="fname" name="fname" pattern="[A-Za-z]+" required minlength="1"><br>
+        <label for="mname">Middle Name</label><br>
+        <input type="text" id="mname" name="mname" pattern="[A-Za-z]+"><br>
+        <label for="lname">Last Name</label><br>
+        <input type="text" id="lname" name="lname" pattern="[A-Za-z]+" required minlength="2"><br>
+        <label for="address">Complete Address</label><br>
+        <input type="text" id="address" name="address" pattern="[A-Za-z0-9\s]+" required><br>
+        <label for="bday">Birthday</label><br>
+        <input type="text" id="bday" name="bday" pattern="\d{2}-\d{2}-\d{4}" placeholder="mm-dd-yyyy" required><br>
+        <label for="mnumber">Mobile Number</label>
+        <input type="text" id="mnumber" name="mnumber" pattern="[0-9]+" required minlength="11" maxlength="11"><br>
+        <a href="login.html" id="submit"><button>Submit</button></a>
+      </form>
+      <p>Already have a Drift Account? <a href="login.html" id="login">Login here!</a></p>
+    </div>
+  </div>
+</body>
+
+</html>

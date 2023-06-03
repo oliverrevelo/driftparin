@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="pics/logo_white_bg.png">
+  <title>Login to Drift!</title>
+</head>
+
+<body>
+  <div class="container">
+    <img src="pics/logo_no_bg.png" class="logo">
+    <h1>Login to Drift!</h1>
+    <div class="form">
+      <form>
+        <label for="uname">Username</label><br>
+        <input type="text" id="uname" name="uname" pattern="[A-Za-z0-9]+" required minlength="4" maxlength="12"><br>
+        <label for="password">Password</label><br>
+        <input type="password" id="password" name="password" required minlength="8"><br>
+      </form>
+    </div>
+    <div class="out-form">
+      <p>New to Drift? <a href="register.html" id="login">Register here!</a></p>
+      <button><a href="#" id="submit">Login</a></button>
+      <p>&copy; Drift 2023 Company, Inc</p>
+    </div>
+  </div>
+</body>
+
+</html>
